@@ -30,6 +30,9 @@ dd {
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
+html body{
+	overflow-x: hidden;
+}
 body {
      min-height: 100vh;
      scroll-behavior: smooth;
@@ -195,16 +198,16 @@ ul.definition__list .definition__list-item::before {
      display: flex;
      align-content: inherit;
      margin: 0 -20px;
-     margin-top: 25px;
+     padding-top:45px;
      overflow-x: auto;
 }
 .column {
-     flex: 1 0 300px;
+     flex: 0 1 33.333%;
      padding: 0 20px;
      border-right: 1px solid silver;
 }
 .column:last-child {
-     border: 0px;
+     border-right: 0px;
 }
 .gallery {
      margin-top: 20px;
@@ -212,14 +215,40 @@ ul.definition__list .definition__list-item::before {
 .gallery img {
      max-width: 100%;
 }
+@media (max-width: 991.98px){
+	  .definition-columns{
+		  flex-wrap: wrap;
+	  }
+	  .column {
+		  flex: 0 1 50%;
+		  border: 1px solid silver;
+	  }
+	  .column:nth-child(2){
+		  /* border-right: 0px; */
+	  }
+	  .column:last-child{
+		 padding-top: 20px;
+		 padding-bottom: 20px;
+		  flex: 1 1 100%;
+		  border-right: 1px solid silver;
+		   border-top: 1px solid silver;
+		  border-bottom: 1px solid silver;
+	  }
+}
 @media (max-width: 767.98px) {
      .main-title {
           font-size: 34px;
      }
-     /* .column {
-          font-size: 14px;
-          line-height: 27px;
-     } */
+    .definition-columns{
+		display: block;
+		padding-top: 30px;
+	}
+	.column {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border: 1px solid silver;
+		  border-bottom: 0px solid silver;
+	  }
      .definition__title {
           font-size: 18px;
      }
