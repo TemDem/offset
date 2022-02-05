@@ -1,0 +1,166 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+     box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+     padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+     margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+     min-height: 100vh;
+     scroll-behavior: smooth;
+     text-rendering: optimizeSpeed;
+     line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+     list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+     text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+     max-width: 100%;
+     display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+     margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+     font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+     * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+     }
+}
+
+
+
+
+body {
+     font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper {
+     display: flex;
+     min-height: 100vh;
+}
+.page {
+     background-color: rgb(53, 47, 47);
+     flex: 1 1 auto;
+     color: rgb(255, 255, 255);
+}
+.page__container {
+}
+.container {
+     padding: 30px 20px;
+     max-width: 1200px;
+     margin: 0 auto;
+}
+.definitions {
+}
+.definitions__main-title {
+}
+.main-title {
+     font-size: 48px;
+     text-align: center;
+     padding: 0 0 30px 0;
+     font-weight: 700;
+}
+.definitions__definition {
+}
+.definition {
+     padding-bottom: 30px;
+	 line-height: 32px;
+}
+.definition:last-child {
+     padding-bottom: 0;
+}
+.definition__title {
+     display: inline-block;
+     font-weight: 700;
+     color: rgb(219, 51, 51);
+     font-size: 20px;
+		/* background-color: rgb(34, 7, 7); */
+}
+ul.definition__list {
+	margin-top: 15px;
+}
+ol.definition__list{
+	list-style-type: decimal;
+	margin-left: 20px;
+	margin-top: 15px;
+}
+ol.definition__list .definition__list-item{
+	position: static;
+	padding: 0 0 10px 10px;
+}
+.definition__list-item {
+	position: relative;
+	padding: 0 0 10px 20px;
+}
+.definition__list-item::before{
+	content: '';
+	position: absolute;
+	top: 15px;
+	left: 0;
+	width: 5px;
+	height: 1px;
+	background-color: rgb(219, 51, 51);
+}
+.gallery{
+	margin-top: 20px;
+}
+.gallery img{
+	max-width: 100%;
+}
+@media (max-width: 767.98px) {
+     .main-title {
+          font-size: 34px;
+     }
+	 .definition__title{
+		 font-size: 18px;
+	 }
+}
