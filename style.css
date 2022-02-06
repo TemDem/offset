@@ -235,6 +235,11 @@ ul.definition__list .definition__list-item::before {
 		  border-bottom: 1px solid silver;
 	  }
 }
+.title{
+	font-size: 24px;
+	text-align: center;
+	display: block;
+}
 @media (max-width: 767.98px) {
      .main-title {
           font-size: 34px;
@@ -252,6 +257,9 @@ ul.definition__list .definition__list-item::before {
      .definition__title {
           font-size: 18px;
      }
+	 .title{
+		 font-size: 22px;
+	 }
      .definition__title_center {
           font-size: 20px;
      }
