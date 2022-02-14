@@ -240,6 +240,19 @@ ul.definition__list .definition__list-item::before {
 	text-align: center;
 	display: block;
 }
+._line{
+	position: relative;
+	padding-bottom: 40px;
+}
+._line::after{
+	content: '';
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: silver;
+}
 @media (max-width: 767.98px) {
      .main-title {
           font-size: 34px;
